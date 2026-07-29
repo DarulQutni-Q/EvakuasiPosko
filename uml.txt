@@ -1,0 +1,165 @@
+Asset untuk Pembuatan UML Class Diagram
+
+Daftar Kelas dan Relasinya
+
+1. Exception Classes (Inheritance dari Built-in Exceptions)
+KapasitasPoskoPenuhError (extends Exception)
+Atribut: 
++ posko_id: str
++ message: str
+
+DataKesehatanTidakValidError (extends ValueError)
+Atribut: 
++ kondisi_input: str
++ message: str
+
+2. Observer Pattern
+Observer (Interface/Abstract)
+Method: 
++ update(message: str): void
+
+Subject (Interface/Abstract)
+Atribut: 
+- _observers: List[Observer]
+Method: 
++ attach(observer: Observer)
++ detach(observer: Observer)
++ notify(message: str)
+
+3. Entitas Utama (Model)
+Posko (extends Subject)
+Atribut:
++ id_posko: str
++ nama: str
++ wilayah: str
++ kapasitas_maksimal: int
++ kapasitas_terisi: int
++ stok_bantuan: int
++ batas_kritis_kapasitas: int
++ batas_kritis_stok: int
+Method:
++ cek_kondisi_kritis(): void
++ tambah_warga(warga: WargaTerdampak): void
++ kurangi_warga(warga: WargaTerdampak): void
++ tambah_bantuan(jumlah: int): void
++ kurangi_bantuan(jumlah: int): bool
++ to_dict(): dict
+
+Relawan (extends Observer)
+Atribut:
++ nama: str
++ notifikasi_diterima: List[str]
+Method:
++ update(message: str): void
+
+WargaTerdampak (Abstract Class)
+Atribut:
++ id_warga: str
++ nama: str
++ usia: int
++ jenis_kelamin: str
++ tingkat_bahaya: str
+- __kondisi_kesehatan: str (Privat)
+- __posko_id: str (Privat)
+Property (Getter/Setter):
++ kondisi_kesehatan(): str
++ posko_id(): str
+Method:
+# _hitung_skor_kondisi(): int (Protected)
+# _hitung_skor_bahaya(): int (Protected)
++ hitung_prioritas_evakuasi(): int (Abstract)
++ to_dict(): dict
+
+Anak (extends WargaTerdampak)
+Method: 
++ hitung_prioritas_evakuasi(): int (Overriding)
+
+Dewasa (extends WargaTerdampak)
+Method: 
++ hitung_prioritas_evakuasi(): int (Overriding)
+
+Lansia (extends WargaTerdampak)
+Method: 
++ hitung_prioritas_evakuasi(): int (Overriding)
+
+4. Service / Manager
+DataManager
+Atribut:
++ data_dir: str
++ warga_file: str
++ posko_file: str
++ distribusi_file: str
+Method:
+- _inisialisasi_file_awal(): void
++ load_warga(): List[WargaTerdampak]
++ save_warga(warga_list: List[WargaTerdampak]): void
++ load_posko(): List[Posko]
++ save_posko(posko_list: List[Posko]): void
++ load_distribusi(): List[dict]
++ add_distribusi(...): void
++ buat_laporan_txt(isi: str): str
++ buat_laporan_csv(data_list: list, headers: list, filename: str): str
+
+EvakuasiSystem
+Atribut:
++ data_manager: DataManager
++ daftar_warga: List[WargaTerdampak]
++ daftar_posko: List[Posko]
++ relawan_terdaftar: List[Relawan]
+Method:
++ register_relawan(relawan: Relawan): void
++ tambah_warga_baru(...): WargaTerdampak
++ update_warga(...): void
++ hapus_warga(id_warga: str): void
++ tambah_posko_baru(...): Posko
++ update_posko(...): void
++ hapus_posko(id_posko: str): void
++ evakuasi_warga(warga_id: str, posko_id: str): bool
++ dapatkan_daftar_prioritas(): List[WargaTerdampak]
++ distribusikan_bantuan(...): void
++ get_preview_laporan(): tuple
++ ekspor_laporan_txt(): str
++ ekspor_laporan_csv(): str
++ ekspor_data_warga_csv(): str
+
+5. GUI
+EvakuasiApp (extends tk.Tk)
+Atribut:
++ system: EvakuasiSystem
++ gui_relawan: GuiRelawan (Inner class extends Relawan)
+Method:
++ create_widgets(): void
++ setup_tab_warga(): void
++ setup_tab_kelola_posko(): void
++ setup_tab_posko(): void
++ setup_tab_laporan(): void
++ simpan_warga(): void
++ load_warga_for_edit(): void
++ hapus_warga_terpilih(): void
++ export_warga(): void
++ simpan_posko(): void
++ load_posko_for_edit(): void
++ hapus_posko_terpilih(): void
++ proses_evakuasi(): void
++ proses_distribusi(): void
++ export_txt(): void
++ export_csv(): void
+
+Relasi Penting untuk Ditarik Garis di UML
+1. Generalization (Pewarisan/Panah Segitiga Kosong):
+Anak -> WargaTerdampak
+Dewasa -> WargaTerdampak
+Lansia -> WargaTerdampak
+Posko -> Subject
+Relawan -> Observer
+KapasitasPoskoPenuhError -> Exception
+DataKesehatanTidakValidError -> ValueError
+
+2. Realization / Implementation (Garis Putus-putus Panah Segitiga Kosong):
+Subject menggunakan/memanggil update() pada Observer.
+
+3. Association / Composition (Garis Biasa/Belah Ketupat):
+EvakuasiSystem memiliki asosiasi 1-to-1 dengan DataManager.
+EvakuasiSystem menyimpan daftar (1-to-Many) WargaTerdampak dan Posko.
+Posko (melalui daftar _observers) menyimpan referensi ke Observer.
+EvakuasiApp (GUI) membuat instance EvakuasiSystem.

@@ -1,0 +1,32 @@
+=== LAPORAN MANAJEMEN EVAKUASI BENCANA ===
+Tanggal Laporan: 2026-07-29 16:26:18
+
+1. RINGKASAN UMUM
+   - Total Warga Terdampak: 4
+   - Jumlah Pengungsi (Sudah Dievakuasi): 4
+   - Kebutuhan Belum Terpenuhi (Belum Dievakuasi): 0
+   - Total Bantuan Didistribusikan: 70 unit
+
+2. KAPASITAS POSKO PER WILAYAH
+   - Wilayah Tidak Diketahui:
+     Jumlah Posko: 2
+     Kapasitas Terisi: 3 / 150
+   - Wilayah Samalanga:
+     Jumlah Posko: 1
+     Kapasitas Terisi: 1 / 20
+
+3. DETAIL POSKO
+   - Posko Balai Desa (ID: P001, Wilayah: Tidak Diketahui)
+     Kapasitas: 2/50
+     Stok Bantuan: 100 unit
+
+   - Posko SDN 1 (ID: P002, Wilayah: Tidak Diketahui)
+     Kapasitas: 1/100
+     Stok Bantuan: 200 unit
+
+   - Posko MBG (ID: P003, Wilayah: Samalanga)
+     Kapasitas: 1/20
+     Stok Bantuan: 10 unit
+
+4. DAFTAR PRIORITAS EVAKUASI (Belum Dievakuasi)
+   Semua warga telah dievakuasi.

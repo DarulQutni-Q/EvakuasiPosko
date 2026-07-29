@@ -1,0 +1,32 @@
+[
+  {
+    "id": "P001",
+    "nama": "Posko Balai Desa",
+    "wilayah": "Tidak Diketahui",
+    "kapasitas_maksimal": 50,
+    "kapasitas_terisi": 2,
+    "stok_bantuan": 120,
+    "batas_kritis_kapasitas": 45,
+    "batas_kritis_stok": 20
+  },
+  {
+    "id": "P002",
+    "nama": "Posko SDN 1",
+    "wilayah": "Tidak Diketahui",
+    "kapasitas_maksimal": 100,
+    "kapasitas_terisi": 1,
+    "stok_bantuan": 200,
+    "batas_kritis_kapasitas": 90,
+    "batas_kritis_stok": 30
+  },
+  {
+    "id": "P003",
+    "nama": "Posko MBG",
+    "wilayah": "Samalanga",
+    "kapasitas_maksimal": 20,
+    "kapasitas_terisi": 2,
+    "stok_bantuan": 10,
+    "batas_kritis_kapasitas": 25,
+    "batas_kritis_stok": 10
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "W001",
+    "nama": "Budi",
+    "usia": 41,
+    "jenis_kelamin": "Tidak Diketahui",
+    "tipe": "Dewasa",
+    "kondisi_kesehatan": "Sehat",
+    "tingkat_bahaya_lokasi": "Tinggi",
+    "posko_id": "P001"
+  },
+  {
+    "id": "W002",
+    "nama": "Ani",
+    "usia": 8,
+    "jenis_kelamin": "Perempuan",
+    "tipe": "Anak",
+    "kondisi_kesehatan": "Sakit Ringan",
+    "tingkat_bahaya_lokasi": "Tinggi",
+    "posko_id": "P001"
+  },
+  {
+    "id": "W003",
+    "nama": "Siti",
+    "usia": 70,
+    "jenis_kelamin": "Perempuan",
+    "tipe": "Lansia",
+    "kondisi_kesehatan": "Sakit Parah",
+    "tingkat_bahaya_lokasi": "Sedang",
+    "posko_id": "P002"
+  },
+  {
+    "id": "W004",
+    "nama": "Darul",
+    "usia": 18,
+    "jenis_kelamin": "Laki-laki",
+    "tipe": "Dewasa",
+    "kondisi_kesehatan": "Sehat",
+    "tingkat_bahaya_lokasi": "Tinggi",
+    "posko_id": "P003"
+  },
+  {
+    "id": "W005",
+    "nama": "Adinda",
+    "usia": 21,
+    "jenis_kelamin": "Perempuan",
+    "tipe": "Dewasa",
+    "kondisi_kesehatan": "Sehat",
+    "tingkat_bahaya_lokasi": "Sedang",
+    "posko_id": "P003"
+  }
+]
