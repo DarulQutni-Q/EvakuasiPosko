@@ -1,0 +1,14 @@
+test_baca_tulis_file (tests.test_evakuasi.TestEvakuasiBencana.test_baca_tulis_file) ... ok
+test_encapsulation_kondisi_valid (tests.test_evakuasi.TestEvakuasiBencana.test_encapsulation_kondisi_valid) ... ok
+test_exception_kesehatan_tidak_valid (tests.test_evakuasi.TestEvakuasiBencana.test_exception_kesehatan_tidak_valid) ... ok
+test_exception_posko_penuh (tests.test_evakuasi.TestEvakuasiBencana.test_exception_posko_penuh) ... ok
+test_inisialisasi_warga (tests.test_evakuasi.TestEvakuasiBencana.test_inisialisasi_warga) ... ok
+test_observer_notifikasi_kritis (tests.test_evakuasi.TestEvakuasiBencana.test_observer_notifikasi_kritis) ... ok
+test_polymorphism_prioritas (tests.test_evakuasi.TestEvakuasiBencana.test_polymorphism_prioritas) ... ok
+test_tambah_warga_posko (tests.test_evakuasi.TestEvakuasiBencana.test_tambah_warga_posko) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.002s
+
+OK
+[Notifikasi Relawan Relawan 1] PERINGATAN: Posko Posko A (P1) mendekati/mencapai kapasitas maksimal! (2/10)
