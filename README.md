@@ -21,6 +21,21 @@ Proyek ini dibangun untuk memenuhi kriteria:
    pip install -r requirements.txt
    ```
 
+## Struktur Proyek
+
+- `main.py` — entry point aplikasi (Tkinter GUI)
+- `src/` — model, layanan, dan utilitas
+- `data/` — data JSON/CSV (warga, posko, distribusi bantuan)
+- `tests/` — unit test (pytest)
+
+## Pengujian
+
+```bash
+pytest tests/
+```
+
+Catatan: `tkinter` adalah pustaka standar Python, tidak perlu diinstal via pip.
+
 ## Cara Menjalankan Aplikasi
 Buka terminal dan jalankan:
 ```bash
